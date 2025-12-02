@@ -62,7 +62,7 @@ export function Services({ onServiceClick }: ServicesProps) {
                     </p>
                 </div>
 
-                <div className="flex flex-row flex-wrap gap-8">
+                <div className="flex flex-col flex-wrap mobile-size gap-8">
                     {services.map((service) => {
                         const Icon = service.icon;
                         return (
