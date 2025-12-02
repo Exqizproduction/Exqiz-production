@@ -44,8 +44,8 @@ const serviceDetails = {
     ],
     process: [
       { step: "Dérushage", description: "Analyse et sélection des meilleurs plans" },
-      { step: "Montage Ours", description: "Première version de la structure narrative" },
-      { step: "Montage Final", description: "Affinage, ajustements et peaufinage" },
+      { step: "Montage", description: "Première version de la structure narrative" },
+      { step: "Colorimétrie", description: "Affinage, ajustements et peaufinage" },
       { step: "Validation", description: "Aller-retours et modifications selon vos retours" }
     ],
     pricing: "400€ / jour de montage",

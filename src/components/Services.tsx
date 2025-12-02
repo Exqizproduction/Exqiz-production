@@ -62,14 +62,14 @@ export function Services({ onServiceClick }: ServicesProps) {
                     </p>
                 </div>
 
-                <div className="flex flex-col flex-wrap mobile-size gap-8">
+                <div className="flex flex-col flex-wrap justify-evenly mobile-size gap-8">
                     {services.map((service) => {
                         const Icon = service.icon;
                         return (
                             <button
                                 key={service.id}
                                 onClick={() => onServiceClick(service.id)}
-                                className="bg-white/5 p-8 rounded-lg hover:bg-white/10 transition-all border border-white/10 hover:border-white/30 text-left group cursor-pointer"
+                                className="max-w-m bg-white/5 p-8 rounded-lg hover:bg-white/10 transition-all border border-white/10 hover:border-white/30 text-left group cursor-pointer"
                             >
                                 <div className="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
                                     <Icon className="w-7 h-7 text-white" />

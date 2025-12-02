@@ -72,6 +72,8 @@
         --color-black: #000;
         --color-white: #fff;
         --spacing: 0.25rem;
+        --container-m: 24rem;
+        --container-1xl: 32rem;
         --container-2xl: 42rem;
         --container-3xl: 48rem;
         --container-4xl: 56rem;
@@ -759,6 +761,14 @@
         width: 100%;
     }
 
+    .max-w-m {
+        max-width: var(--container-m);
+    }
+
+    .max-w-1xl {
+        max-width: var(--container-1xl);
+    }
+
     .max-w-2xl {
         max-width: var(--container-2xl);
     }
@@ -777,6 +787,10 @@
 
     .max-w-6xl {
         max-width: var(--container-6xl);
+    }
+
+    .flex-wrap {
+        flex-wrap: wrap;
     }
 
     .flex-1 {
@@ -822,8 +836,8 @@
         align-items: flex-start;
     }
 
-    .justify-between {
-        justify-content: space-between;
+    .justify-evenly {
+        justify-content: space-evenly;
     }
 
     .justify-center {
