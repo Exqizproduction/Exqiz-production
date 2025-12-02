@@ -16,9 +16,7 @@ export function Contact() {
         const email = encodeURIComponent(formData.email);
         const subject = encodeURIComponent(formData.subject);
         const message = encodeURIComponent(formData.message);
-        const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&from=${email}&to=exqizproduction@gmail.com&su=${subject} - ${name}&body=${message}`;
-
-        window.open(gmailLink, "_blank");
+        window.location.href = `mailto:bastienbillard69100@gmail.com?from=${email}&subject=${subject} - ${name}&body=${message}`;
 
         setFormData({ name: "", email: "", subject: "", message: "" });
     };
