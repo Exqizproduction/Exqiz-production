@@ -121,7 +121,7 @@ export function Contact() {
           </div>
           
           <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form action={"mailto:bastienbillard69100@gmail.com"} method="GET" className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm mb-2 text-gray-300">
                   Nom complet *
