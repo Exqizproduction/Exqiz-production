@@ -4,4 +4,3 @@
   import "./index.css";
 
   createRoot(document.getElementById("root")!).render(<App />);
-  navigator.registerProtocolHandler("mailto", "https://mail.google.com/mail/?extsrc=mailto&url=%s");
