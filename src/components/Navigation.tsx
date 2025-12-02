@@ -13,7 +13,7 @@ export function Navigation() {
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <Film className="w-6 h-6" />
-          <span>Marc Dubois</span>
+          <span>Exqiz Production</span>
         </div>
         <ul className="flex gap-8">
           <li>
