@@ -1,5 +1,7 @@
 import { Play } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import banner from "../assets/images/banner.png";
+import profilePic from "../assets/images/profil.jpg";
 
 export function Hero() {
     return (
@@ -9,7 +11,7 @@ export function Hero() {
         >
             <div className="absolute inset-0 z-0">
                 <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1654288891700-95f67982cbcc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMHByb2R1Y3Rpb24lMjBjYW1lcmF8ZW58MXx8fHwxNzY0NDg1MjgxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    src={banner}
                     alt="Production vidéo"
                     className="w-full h-full object-cover"
                 />
@@ -23,7 +25,7 @@ export function Hero() {
                         <div className="relative">
                             <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-primary/30">
                                 <ImageWithFallback
-                                    src="https://images.unsplash.com/photo-1739296385104-f9e3087897f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBmaWxtbWFrZXIlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjQ2NzA4MDF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                                    src={profilePic}
                                     alt="Marc Dubois"
                                     className="w-full h-full object-cover"
                                 />

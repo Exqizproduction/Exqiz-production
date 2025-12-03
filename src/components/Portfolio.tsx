@@ -1,47 +1,54 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Play } from "lucide-react";
 
+import pubThumb from'../assets/images/thumbnails/Pub fictive.png';
+import courtThumb from'../assets/images/thumbnails/Court metrage.png';
+import instaThumb from'../assets/images/thumbnails/Instagram.png';
+import musicThumb from'../assets/images/thumbnails/Clip musicale.png';
+import publiThumb from'../assets/images/thumbnails/Publi portrait.png';
+import interviewThumb from'../assets/images/thumbnails/Interview.png';
+
 const projects = [
     {
         id: 1,
         title: "Documentaire Corporatif",
         category: "Documentaire",
-        image: "https://images.unsplash.com/photo-1759521528494-fd6ceb6049e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N1bWVudGFyeSUyMGZpbG18ZW58MXx8fHwxNzY0NTIyNzk2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        image: pubThumb,
         duration: "12:30",
     },
     {
         id: 2,
         title: "Clip Musical Indépendant",
         category: "Clip Musical",
-        image: "https://images.unsplash.com/photo-1723396612574-961649793bb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaW5lbWElMjBwcm9kdWN0aW9ufGVufDF8fHx8MTc2NDQyMjEyNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        image: courtThumb,
         duration: "3:45",
     },
     {
         id: 3,
         title: "Vidéo Promotionnelle",
         category: "Commercial",
-        image: "https://images.unsplash.com/photo-1713392824135-a7c7db3d9465?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aWRlb2dyYXBoZXIlMjBmaWxtaW5nfGVufDF8fHx8MTc2NDQwNzk1M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        image: instaThumb,
         duration: "1:30",
     },
     {
         id: 4,
         title: "Court-métrage Fiction",
         category: "Fiction",
-        image: "https://images.unsplash.com/photo-1583215794430-78a2c664751e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaWxtJTIwZWRpdGluZyUyMHN0dWRpb3xlbnwxfHx8fDE3NjQ1MTkyMTV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        image: musicThumb,
         duration: "18:20",
     },
     {
         id: 5,
         title: "Reportage Événementiel",
         category: "Événementiel",
-        image: "https://images.unsplash.com/photo-1654288891700-95f67982cbcc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMHByb2R1Y3Rpb24lMjBjYW1lcmF8ZW58MXx8fHwxNzY0NDg1MjgxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        image: publiThumb,
         duration: "8:15",
     },
     {
         id: 6,
         title: "Vidéo Institutionnelle",
         category: "Institutionnel",
-        image: "https://images.unsplash.com/photo-1519217651866-847339e674d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjQ0NjU0ODF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        image: interviewThumb,
         duration: "5:40",
     },
 ];
