@@ -1,53 +1,55 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Play } from "lucide-react";
 
-import pubThumb from'../assets/images/thumbnails/Pub fictive.png';
-import courtThumb from'../assets/images/thumbnails/Court metrage.png';
-import instaThumb from'../assets/images/thumbnails/Instagram.png';
-import musicThumb from'../assets/images/thumbnails/Clip musicale.png';
-import publiThumb from'../assets/images/thumbnails/Publi portrait.png';
-import interviewThumb from'../assets/images/thumbnails/Interview.png';
+import pubThumb from "../assets/images/thumbnails/pub_fictive.png";
+import courtThumb from "../assets/images/thumbnails/court_metrage.png";
+import instaThumb from "../assets/images/thumbnails/instagram.png";
+import musicThumb from "../assets/images/thumbnails/clip_musicale.png";
+import publiThumb from "../assets/images/thumbnails/publi_portrait.png";
+import interviewThumb from "../assets/images/thumbnails/interview.png";
+import { cn } from "./ui/utils";
 
 const projects = [
     {
         id: 1,
-        title: "Documentaire Corporatif",
-        category: "Documentaire",
+        title: "MAKE IT FLUID",
+        category: "Pubilicité Fictive",
         image: pubThumb,
-        duration: "12:30",
+        duration: "00:39",
     },
     {
         id: 2,
-        title: "Clip Musical Indépendant",
-        category: "Clip Musical",
+        title: "S'EMMÊLER",
+        category: "Court Métrage",
         image: courtThumb,
-        duration: "3:45",
+        duration: "1:49",
     },
     {
         id: 3,
-        title: "Vidéo Promotionnelle",
-        category: "Commercial",
+        title: "OCTOPOOL",
+        category: "Vidéo Promotionnelle",
         image: instaThumb,
-        duration: "1:30",
+        duration: "1:09",
+        style: "translate-x--26",
     },
     {
         id: 4,
-        title: "Court-métrage Fiction",
-        category: "Fiction",
+        title: "SHOOT FOR THE STARS",
+        category: "Clip Musical",
         image: musicThumb,
-        duration: "18:20",
+        duration: "4:50",
     },
     {
         id: 5,
-        title: "Reportage Événementiel",
-        category: "Événementiel",
+        title: "LA STACHE",
+        category: "Publi-Portrait",
         image: publiThumb,
-        duration: "8:15",
+        duration: "3:03",
     },
     {
         id: 6,
-        title: "Vidéo Institutionnelle",
-        category: "Institutionnel",
+        title: "BESSARD VISION",
+        category: "Portrait Artisant",
         image: interviewThumb,
         duration: "5:40",
     },
@@ -75,7 +77,10 @@ export function Portfolio() {
                             <ImageWithFallback
                                 src={project.image}
                                 alt={project.title}
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                className={cn(
+                                    "object-cover transition-transform duration-500 group-hover:scale-110",
+                                    project.style
+                                )}
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
 

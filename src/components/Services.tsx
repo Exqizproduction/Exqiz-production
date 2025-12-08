@@ -53,7 +53,7 @@ interface ServicesProps {
 export function Services({ onServiceClick }: ServicesProps) {
     return (
         <section id="services" className="py-24">
-            <div className="container mx-auto px-6">
+            <div className="container flex flex-col items-center mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="mb-4">Mes Services</h2>
                     <p className="text-gray-400 max-w-2xl mx-auto">
@@ -62,7 +62,7 @@ export function Services({ onServiceClick }: ServicesProps) {
                     </p>
                 </div>
 
-                <div className="flex flex-col flex-wrap justify-evenly mobile-size gap-8">
+                <div className="flex flex-col flex-wrap justify-center mobile-size gap-8 max-w-7xl">
                     {services.map((service) => {
                         const Icon = service.icon;
                         return (

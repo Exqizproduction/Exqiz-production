@@ -1,5 +1,27 @@
-import { Instagram, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
+import {
+    Instagram,
+    Linkedin,
+    Mail,
+    MapPin,
+    Phone,
+    Send,
+    Link,
+} from "lucide-react";
 import { useState } from "react";
+import tiktok from "../assets/images/icons/tik-tok.png";
+
+import { createLucideIcon } from "lucide-react";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+
+export const TiktokIcon = createLucideIcon("TiktokIcon", [
+    [
+        "path",
+        {
+            d: "M12.9167 8.425C12.9167 12.4583 12.4583 16.5833 12 17.5917C10.8083 19.7917 7.78333 19.8833 6.59167 17.775C5.58333 15.85 6.86667 12.9167 8.79167 12.9167C9.525 12.9167 10.1667 12.0917 10.1667 11.0833C10.1667 8.7 8.33333 8.79167 5.21667 11.175C0.45 14.9333 3.2 23 9.25 23C13.5583 23 15.6667 19.975 15.6667 13.8333V8.33333L18.05 9.25C22.0833 10.8083 23.9167 7.78333 20.0667 6.04167C18.875 5.49167 17.5917 4.20833 17.0417 3.01667C16.5833 1.91667 15.3917 1 14.5667 1C13.1 1 12.9167 1.91667 12.9167 8.425Z",
+            key: "tiktok-path",
+        },
+    ],
+]);
 
 export function Contact() {
     const [formData, setFormData] = useState({
@@ -86,7 +108,7 @@ export function Contact() {
 
                             <div className="flex items-start gap-4">
                                 <div className="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <Instagram className="w-6 h-6" />
+                                    <Link className="w-6 h-6" />
                                 </div>
                                 <div className="flex-1">
                                     <div className="text-gray-400 text-sm mb-2">
@@ -108,6 +130,14 @@ export function Contact() {
                                             className="w-10 h-10 bg-white/5 hover:bg-white/10 rounded-lg flex items-center justify-center transition-colors"
                                         >
                                             <Linkedin className="w-5 h-5" />
+                                        </a>
+                                        <a
+                                            href="https://www.tiktok.com/@exqiz_prod"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="w-10 h-10 bg-white/5 hover:bg-white/10 rounded-lg flex items-center justify-center transition-colors"
+                                        >
+                                            <TiktokIcon className="w-5 h-5" />
                                         </a>
                                     </div>
                                 </div>

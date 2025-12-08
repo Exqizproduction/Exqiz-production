@@ -13,7 +13,7 @@ export function Hero() {
                 <ImageWithFallback
                     src={banner}
                     alt="Production vidéo"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full translate-x-banner translate-y-banner scale-125 object-cover"
                 />
                 <div className="absolute inset-0 bg-black/70"></div>
             </div>
