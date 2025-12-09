@@ -1,5 +1,6 @@
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useIsMobile } from "./ui/use-mobile";
 
 export function Clients() {
     const testimonials = [
@@ -45,7 +46,7 @@ export function Clients() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
     const [isTransitioning, setIsTransitioning] = useState(true);
-    const itemsPerView = 3;
+    const itemsPerView = !useIsMobile() ? 3 : 1;
 
     // Créer une liste avec des clones pour la boucle infinie
     const extendedTestimonials = [
@@ -100,7 +101,7 @@ export function Clients() {
     };
 
     return (
-        <section id="clients" className="py-24">
+        <section id="clients" className="py-16">
             <div className="container mx-auto px-12">
                 <div className="text-center mb-16">
                     <h2 className="mb-4">Ils me font confiance</h2>

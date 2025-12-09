@@ -82,7 +82,7 @@ const serviceDetails = {
         ],
         pricing: "400€ / jour de montage",
         duration: "1 à 10 jours selon la complexité",
-        style:""
+        style: null,
     },
     conception: {
         title: "Conception Créative",
@@ -118,7 +118,7 @@ const serviceDetails = {
         ],
         pricing: "800€ - 2 000€ selon l'ampleur",
         duration: "1 à 2 semaines",
-        style:""
+        style: null,
     },
     "post-production": {
         title: "Post-Production",
@@ -154,7 +154,7 @@ const serviceDetails = {
         ],
         pricing: "500€ / jour de post-production",
         duration: "2 à 5 jours selon le projet",
-        style:""
+        style: null,
     },
     entreprise: {
         title: "Vidéo d'Entreprise",
@@ -190,7 +190,7 @@ const serviceDetails = {
         ],
         pricing: "1 500€ - 5 000€ selon le format",
         duration: "1 à 3 semaines",
-        style:""
+        style: null,
     },
     "motion-design": {
         title: "Motion Design",
@@ -220,7 +220,7 @@ const serviceDetails = {
         ],
         pricing: "600€ - 3 000€ selon la complexité",
         duration: "3 à 10 jours",
-        style:""
+        style: null,
     },
 };
 
@@ -251,7 +251,10 @@ export function ServiceDetail({ serviceId, onClose }: ServiceDetailProps) {
                 <ImageWithFallback
                     src={service.image}
                     alt={service.title}
-                    className={cn("object-cover", service?.style)}
+                    className={cn(
+                        " object-cover",
+                        service.style ? service.style : "w-full h-full"
+                    )}
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/70 to-black"></div>
                 <div className="absolute inset-0 flex items-center justify-center">

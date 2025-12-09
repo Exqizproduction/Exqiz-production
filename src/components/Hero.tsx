@@ -7,7 +7,7 @@ export function Hero() {
     return (
         <section
             id="accueil"
-            className="relative min-h-screen flex items-center justify-center overflow-hidden py-24"
+            className="relative min-h-screen flex items-center justify-center overflow-hidden py-16"
         >
             <div className="absolute inset-0 z-0">
                 <ImageWithFallback
