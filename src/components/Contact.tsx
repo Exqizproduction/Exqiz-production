@@ -267,7 +267,7 @@ export function Contact() {
                 </div>
             </div>
 
-            <div className="mt-24 pt-8 border-t border-white/10 text-center text-gray-500 text-sm">
+            <div className="mt-24 px-4 border-t border-white/10 text-center text-gray-500 text-sm">
                 <p>
                     © 2025 Exqiz Production - Réalisateur & Monteur Vidéo. Tous
                     droits réservés. Designed by Equinox Dev.

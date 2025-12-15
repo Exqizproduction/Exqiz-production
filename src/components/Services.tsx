@@ -52,7 +52,7 @@ interface ServicesProps {
 
 export function Services({ onServiceClick }: ServicesProps) {
     return (
-        <section id="services" className="py-24">
+        <section id="services" className="py-16">
             <div className="container flex flex-col items-center mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="mb-4">Mes Services</h2>

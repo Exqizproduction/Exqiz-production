@@ -2,8 +2,11 @@ import { Play } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import banner from "../assets/images/banner.png";
 import profilePic from "../assets/images/profil.jpg";
+import { cn } from "./ui/utils";
+import { useIsMobile } from "./ui/use-mobile";
 
 export function Hero() {
+    const isMobile = useIsMobile();
     return (
         <section
             id="accueil"
@@ -13,7 +16,7 @@ export function Hero() {
                 <ImageWithFallback
                     src={banner}
                     alt="Production vidéo"
-                    className="w-full h-full translate-x-banner translate-y-banner scale-125 object-cover"
+                    className="w-full h-full scale-125 object-cover"
                 />
                 <div className="absolute inset-0 bg-black/70"></div>
             </div>
@@ -23,10 +26,15 @@ export function Hero() {
                     {/* Photo de profil */}
                     <div className="flex justify-center">
                         <div className="relative">
-                            <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-primary/30">
+                            <div
+                                className={cn(
+                                    "rounded-full overflow-hidden border-4 border-primary/30",
+                                    isMobile ? "w-32 h-32" : "w-80 h-80"
+                                )}
+                            >
                                 <ImageWithFallback
                                     src={profilePic}
-                                    alt="Marc Dubois"
+                                    alt="Bastien BILLARD"
                                     className="w-full h-full object-cover"
                                 />
                             </div>
@@ -34,7 +42,7 @@ export function Hero() {
                     </div>
 
                     {/* Présentation */}
-                    <div>
+                    <div className="p-4">
                         <div className="mb-4">
                             <span className="text-primary mb-2 block">
                                 Réalisateur & Monteur Vidéo

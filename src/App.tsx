@@ -25,6 +25,16 @@ export default function App() {
         }, 100);
     };
 
+    const handleContact = () => {
+        setSelectedService(null);
+        // Scroll to contact section
+        setTimeout(() => {
+            document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+    };
+
     useEffect(() => {
         // Vérifie si la page a un hash
         if (window.location.hash) {
@@ -40,6 +50,7 @@ export default function App() {
             <ServiceDetail
                 serviceId={selectedService}
                 onClose={handleCloseService}
+                onContact={handleContact}
             />
         );
     }

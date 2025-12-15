@@ -7,6 +7,7 @@ import { cn } from "./ui/utils";
 interface ServiceDetailProps {
     serviceId: string;
     onClose: () => void;
+    onContact: () => void;
 }
 
 const serviceDetails = {
@@ -224,7 +225,11 @@ const serviceDetails = {
     },
 };
 
-export function ServiceDetail({ serviceId, onClose }: ServiceDetailProps) {
+export function ServiceDetail({
+    serviceId,
+    onClose,
+    onContact,
+}: ServiceDetailProps) {
     const service = serviceDetails[serviceId as keyof typeof serviceDetails];
 
     if (!service) {
@@ -337,11 +342,12 @@ export function ServiceDetail({ serviceId, onClose }: ServiceDetailProps) {
                             </div>
                         </div>
                         <div className="mt-8">
-                            <a href="/#contact">
-                                <button className="w-full bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors">
-                                    Demander un devis
-                                </button>
-                            </a>
+                            <button
+                                className="w-full bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+                                onClick={onContact}
+                            >
+                                Demander un devis
+                            </button>
                         </div>
                     </div>
                 </div>
