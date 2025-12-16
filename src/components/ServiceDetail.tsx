@@ -3,6 +3,8 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 import realisationImg from "../assets/images/services/realisation.avif";
 import { cn } from "./ui/utils";
+import { use } from "react";
+import { useIsMobile } from "./ui/use-mobile";
 
 interface ServiceDetailProps {
     serviceId: string;
@@ -231,6 +233,7 @@ export function ServiceDetail({
     onContact,
 }: ServiceDetailProps) {
     const service = serviceDetails[serviceId as keyof typeof serviceDetails];
+    const isMobile = useIsMobile();
 
     if (!service) {
         return null;
@@ -258,7 +261,11 @@ export function ServiceDetail({
                     alt={service.title}
                     className={cn(
                         " object-cover",
-                        service.style ? service.style : "w-full h-full"
+                        service.style
+                            ? isMobile
+                                ? "w-full h-full"
+                                : service.style
+                            : "w-full h-full"
                     )}
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/70 to-black"></div>
