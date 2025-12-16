@@ -312,7 +312,7 @@ export function ServiceDetail({
                                     className="bg-white/5 p-6 rounded-lg border border-white/10"
                                 >
                                     <div className="flex items-center gap-3 mb-3">
-                                        <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0">
+                                        <div className="w-8 h-8 bg-primary/80 text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0">
                                             {index + 1}
                                         </div>
                                         <h3>{item.step}</h3>
@@ -343,7 +343,7 @@ export function ServiceDetail({
                         </div>
                         <div className="mt-8">
                             <button
-                                className="w-full bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+                                className="w-full bg-primary/80 text-primary-foreground px-8 py-3 rounded-lg  hover:bg-primary/70 transition-colors"
                                 onClick={onContact}
                             >
                                 Demander un devis

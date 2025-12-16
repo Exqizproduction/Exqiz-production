@@ -40,3 +40,5 @@ coverage/
 .cache/
 temp/
 tmp/
+todo.md
+deploy.js

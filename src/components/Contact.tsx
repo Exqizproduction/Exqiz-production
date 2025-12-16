@@ -24,6 +24,7 @@ export const TiktokIcon = createLucideIcon("TiktokIcon", [
 ]);
 
 export function Contact() {
+    const mailtoEmail = "contact@exqiz-prod.fr";
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -38,7 +39,7 @@ export function Contact() {
         const email = encodeURIComponent(formData.email);
         const subject = encodeURIComponent(formData.subject);
         const message = encodeURIComponent(formData.message);
-        window.location.href = `mailto:bastienbillard69100@gmail.com?from=${email}&subject=${subject} - ${name}&body=${message}`;
+        window.location.href = `mailto:${mailtoEmail}?from=${email}&subject=${subject} - ${name}&body=${message}`;
 
         setFormData({ name: "", email: "", subject: "", message: "" });
     };
@@ -78,7 +79,7 @@ export function Contact() {
                                     <div className="text-gray-400 text-sm mb-1">
                                         Email
                                     </div>
-                                    <div>bastienbillard69100@gmail.com</div>
+                                    <div>{mailtoEmail}</div>
                                 </div>
                             </div>
 
@@ -257,7 +258,7 @@ export function Contact() {
                             <button
                                 type="submit"
                                 onClick={handleSubmit}
-                                className="w-full bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
+                                className="w-full text-primary-foreground px-8 py-3 rounded-lg bg-primary/80 hover:bg-primary/70 transition-colors flex items-center justify-center gap-2"
                             >
                                 <Send className="w-5 h-5" />
                                 Envoyer le message

@@ -1,9 +1,10 @@
 import { Play } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 import banner from "../assets/images/banner.png";
+import logo from "../assets/images/logo.png";
 import profilePic from "../assets/images/profil.jpg";
-import { cn } from "./ui/utils";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useIsMobile } from "./ui/use-mobile";
+import { cn } from "./ui/utils";
 
 export function Hero() {
     const isMobile = useIsMobile();
@@ -18,7 +19,15 @@ export function Hero() {
                     alt="Production vidéo"
                     className="w-full h-full scale-125 object-cover"
                 />
+
                 <div className="absolute inset-0 bg-black/70"></div>
+                {!isMobile && (
+                    <ImageWithFallback
+                        src={logo}
+                        alt="Production vidéo"
+                        className="absolute w-64 h-64 right-0 bottom-0"
+                    />
+                )}
             </div>
 
             <div className="relative z-10 container mx-auto px-6 max-w-6xl">
@@ -78,7 +87,7 @@ export function Hero() {
                                         .getElementById("portfolio")
                                         ?.scrollIntoView({ behavior: "smooth" })
                                 }
-                                className="bg-primary text-primary-foreground px-8 py-3 rounded-full hover:bg-primary/90 transition-colors flex items-center gap-2"
+                                className="text-primary-foreground px-8 py-3 rounded-full bg-primary/80 hover:bg-primary/70 transition-colors flex items-center gap-2"
                             >
                                 <Play className="w-5 h-5" />
                                 Voir mon travail

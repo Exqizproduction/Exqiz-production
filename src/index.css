@@ -529,6 +529,10 @@
         right: 25%;
     }
 
+    .bottom-0 {
+        bottom: calc(var(--spacing) * 0);
+    }
+
     .bottom-1\/4 {
         bottom: 25%;
     }
@@ -702,6 +706,14 @@
         height: calc(var(--spacing) * 16);
     }
 
+    .h-32 {
+        height: calc(var(--spacing) * 32);
+    }
+
+    .h-64 {
+        height: calc(var(--spacing) * 64);
+    }
+
     .h-80 {
         height: calc(var(--spacing) * 80);
     }
@@ -760,6 +772,10 @@
 
     .w-32 {
         width: calc(var(--spacing) * 32);
+    }
+
+    .w-64 {
+        width: calc(var(--spacing) * 64);
     }
 
     .w-80 {
@@ -923,13 +939,27 @@
         translate: var(--tw-translate-x) var(--tw-translate-y);
     }
 
+    .translate-x-26 {
+        --tw-translate-y: 26rem;
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+
     .translate-x--16 {
         --tw-translate-y: -16rem;
         translate: var(--tw-translate-x) var(--tw-translate-y);
     }
 
-    .scale-125 {
+    .translate-y-1 {
+        --tw-translate-y: 1rem;
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+
+    .scale-150 {
         scale: 150% 150%;
+    }
+
+    .scale-125 {
+        scale: 125% 125%;
     }
 
     .overflow-hidden {
@@ -1030,6 +1060,20 @@
 
     .bg-primary {
         background-color: var(--primary);
+    }
+
+    .bg-primary\/80 {
+        background-color: var(--primary);
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+        .bg-primary\/80 {
+            background-color: color-mix(
+                in oklab,
+                var(--primary) 80%,
+                transparent
+            );
+        }
     }
 
     .bg-primary\/5 {
@@ -1553,6 +1597,15 @@
     }
 
     @media (hover: hover) {
+        .group-hover\:scale-135:is(:where(.group):hover *) {
+            --tw-scale-x: 135%;
+            --tw-scale-y: 135%;
+            --tw-scale-z: 135%;
+            scale: var(--tw-scale-x) var(--tw-scale-y);
+        }
+    }
+
+    @media (hover: hover) {
         .group-hover\:bg-white\/20:is(:where(.group):hover *) {
             background-color: #fff3;
         }
@@ -1597,15 +1650,15 @@
     }
 
     @media (hover: hover) {
-        .hover\:bg-primary\/90:hover {
+        .hover\:bg-primary\/70:hover {
             background-color: var(--primary);
         }
 
         @supports (color: color-mix(in lab, red, red)) {
-            .hover\:bg-primary\/90:hover {
+            .hover\:bg-primary\/70:hover {
                 background-color: color-mix(
                     in oklab,
-                    var(--primary) 90%,
+                    var(--primary) 70%,
                     transparent
                 );
             }
@@ -1683,7 +1736,7 @@
     --card-foreground: oklch(0.145 0 0);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.145 0 0);
-    --primary: #d97846;
+    --primary: #dbb67b;
     --primary-foreground: #fff;
     --secondary: oklch(0.95 0.0058 264.53);
     --secondary-foreground: #030213;
@@ -1723,7 +1776,7 @@
     --card-foreground: oklch(0.985 0 0);
     --popover: oklch(0.145 0 0);
     --popover-foreground: oklch(0.985 0 0);
-    --primary: #d97846;
+    --primary: #dbb67b;
     --primary-foreground: #fff;
     --secondary: oklch(0.269 0 0);
     --secondary-foreground: oklch(0.985 0 0);

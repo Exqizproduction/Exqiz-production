@@ -23,6 +23,8 @@ const projects = [
         category: "Court Métrage",
         image: courtThumb,
         duration: "1:49",
+        style: "scale-125",
+        alreadyZoomed: true,
     },
     {
         id: 3,
@@ -51,7 +53,7 @@ const projects = [
         title: "BESSARD VISION",
         category: "Portrait Artisant",
         image: interviewThumb,
-        duration: "5:40",
+        duration: "4:06",
     },
 ];
 
@@ -79,7 +81,10 @@ export function Portfolio() {
                                 alt={project.title}
                                 className={cn(
                                     "object-cover transition-transform duration-500 group-hover:scale-110",
-                                    project.style
+                                    project?.style,
+                                    project?.alreadyZoomed
+                                        ? "group-hover:scale-135"
+                                        : ""
                                 )}
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>

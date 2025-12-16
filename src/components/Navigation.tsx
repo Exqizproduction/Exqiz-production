@@ -1,6 +1,8 @@
-import { Cross, Film, Menu, X } from "lucide-react";
-import { useIsMobile } from "./ui/use-mobile";
+import { Film, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { useIsMobile } from "./ui/use-mobile";
+import logo from "../assets/images/logo.png";
 
 export function Navigation() {
     const isMobile = useIsMobile();
@@ -18,7 +20,11 @@ export function Navigation() {
             <>
                 <div className="container px-6 py-4 flex justify-between items-center">
                     <div className="flex items-center gap-2">
-                        <Film className="w-6 h-6" />
+                        <ImageWithFallback
+                            src={logo}
+                            alt="Production vidéo"
+                            className="w-16 h-16"
+                        />
                         <span>Exqiz Production</span>
                     </div>
                     <button
@@ -33,7 +39,8 @@ export function Navigation() {
                 {menuOpen && (
                     <>
                         <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b-2 py-16 border-white/10 inset-0">
-                            <button className="top-0 right-0 p-8 absolute"
+                            <button
+                                className="top-0 right-0 p-8 absolute"
                                 onClick={() => {
                                     setMenuOpen(false);
                                 }}
@@ -106,8 +113,7 @@ export function Navigation() {
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-white/10">
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-                <div className="flex items-center gap-2">
-                    <Film className="w-6 h-6" />
+                <div className="flex items-center gap-2">                    
                     <span>Exqiz Production</span>
                 </div>
 
