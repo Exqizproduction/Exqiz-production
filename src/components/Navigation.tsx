@@ -25,7 +25,7 @@ export function Navigation() {
                             alt="Production vidéo"
                             className="w-16 h-16"
                         />
-                        <span>Exqiz Production</span>
+                        <span>Exqiz Prod</span>
                     </div>
                     <button
                         onClick={() => {
@@ -114,7 +114,7 @@ export function Navigation() {
         <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-white/10">
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
                 <div className="flex items-center gap-2">                    
-                    <span>Exqiz Production</span>
+                    <span>Exqiz Prod</span>
                 </div>
 
                 <ul className="flex gap-8">
