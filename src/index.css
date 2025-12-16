@@ -866,6 +866,10 @@
         flex-direction: column;
     }
 
+    .items-end {
+        align-items: flex-end;
+    }
+
     .items-center {
         align-items: center;
     }
@@ -1365,6 +1369,10 @@
 
     .object-cover {
         object-fit: cover;
+    }
+
+    .m-4 {
+        margin: calc(var(--spacing) * 4);
     }
 
     .p-6 {

@@ -1,5 +1,5 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { Play } from "lucide-react";
+import { Play, X } from "lucide-react";
 
 import pubThumb from "../assets/images/thumbnails/pub_fictive.png";
 import courtThumb from "../assets/images/thumbnails/court_metrage.png";
@@ -8,6 +8,8 @@ import musicThumb from "../assets/images/thumbnails/clip_musicale.png";
 import publiThumb from "../assets/images/thumbnails/publi_portrait.png";
 import interviewThumb from "../assets/images/thumbnails/interview.png";
 import { cn } from "./ui/utils";
+import { useState } from "react";
+import { useIsMobile } from "./ui/use-mobile";
 
 const projects = [
     {
@@ -16,6 +18,7 @@ const projects = [
         category: "Pubilicité Fictive",
         image: pubThumb,
         duration: "00:39",
+        videoId: "vXCHl_iaoVQ",
     },
     {
         id: 2,
@@ -25,6 +28,7 @@ const projects = [
         duration: "1:49",
         style: "scale-125",
         alreadyZoomed: true,
+        videoId: "IAekrddCuqo"
     },
     {
         id: 3,
@@ -40,6 +44,7 @@ const projects = [
         category: "Clip Musical",
         image: musicThumb,
         duration: "4:50",
+        videoId: "HbxzS1oRTT8"
     },
     {
         id: 5,
@@ -47,6 +52,7 @@ const projects = [
         category: "Publi-Portrait",
         image: publiThumb,
         duration: "3:03",
+        videoId: "J_avGuwM9Js"
     },
     {
         id: 6,
@@ -58,6 +64,9 @@ const projects = [
 ];
 
 export function Portfolio() {
+    const isMobile = useIsMobile();
+    const [displayVideo, setDisplayVideo] = useState<boolean>(false);
+    const [videoId, setVideoId] = useState<string>("");
     return (
         <section id="portfolio" className="py-16">
             <div className="container mx-auto px-6">
@@ -100,14 +109,76 @@ export function Portfolio() {
                             </div>
 
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                                <button
+                                    className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center"
+                                    onClick={() => {
+                                        setDisplayVideo(true);
+                                        setVideoId(project.videoId || "");
+                                    }}
+                                >
                                     <Play className="w-8 h-8 text-white" />
-                                </div>
+                                </button>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
+            {displayVideo && (
+                <div className="flex justify-center items-center absolute from-black/70 fixed inset-0 bg-black/80 z-50">
+                    {!isMobile ? (
+                        <div className="flex flex-col items-end gap-4">
+                            <button
+                                className="w-auto right-0"
+                                onClick={() => setDisplayVideo(false)}
+                            >
+                                <X size={32}></X>
+                            </button>
+                            <iframe
+                                width="800"
+                                height="450"
+                                src={`https://www.youtube.com/embed/${videoId}?rel=0&controls=1&autoplay=1`}
+                                title="Ma vidéo"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+                                allowFullScreen
+                                style={{ borderRadius: "8px" }}
+                            ></iframe>
+                        </div>
+                    ) : (
+                        <div className="w-full aspect-video relative overflow-hidden flex flex-col items-end gap-4">
+                            <button
+                                className="w-auto right-0"
+                                onClick={() => setDisplayVideo(false)}
+                            >
+                                <X size={32}></X>
+                            </button>
+
+                            <div
+                                style={{
+                                    width: "100%",
+                                    aspectRatio: "16/9",
+                                    position: "relative",
+                                    overflow: "hidden",
+                                    backgroundColor: "#000",
+                                }}
+                            >
+                                <iframe
+                                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0`}
+                                    title="Ma vidéo"
+                                    allow="autoplay; encrypted-media; picture-in-picture"
+                                    allowFullScreen
+                                    style={{
+                                        position: "absolute",
+                                        inset: 0,
+                                        width: "100%",
+                                        height: "100%",
+                                        border: 0,
+                                    }}
+                                />
+                            </div>
+                        </div>
+                    )}
+                </div>
+            )}
         </section>
     );
 }
