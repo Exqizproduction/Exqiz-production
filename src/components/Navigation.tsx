@@ -1,8 +1,8 @@
-import { Film, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "../assets/images/logo.avif";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useIsMobile } from "./ui/use-mobile";
-import logo from "../assets/images/logo.png";
 
 export function Navigation() {
     const isMobile = useIsMobile();

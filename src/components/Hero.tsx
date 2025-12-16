@@ -1,7 +1,7 @@
 import { Play } from "lucide-react";
-import banner from "../assets/images/banner.png";
-import logo from "../assets/images/logo.png";
-import profilePic from "../assets/images/profil.jpg";
+import banner from "../assets/images/banner.avif";
+import logo from "../assets/images/logo.avif";
+import profilePic from "../assets/images/profil.avif";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useIsMobile } from "./ui/use-mobile";
 import { cn } from "./ui/utils";

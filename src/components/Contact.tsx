@@ -1,17 +1,15 @@
 import {
     Instagram,
+    Link,
     Linkedin,
     Mail,
     MapPin,
     Phone,
     Send,
-    Link,
 } from "lucide-react";
 import { useState } from "react";
-import tiktok from "../assets/images/icons/tik-tok.png";
 
 import { createLucideIcon } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export const TiktokIcon = createLucideIcon("TiktokIcon", [
     [

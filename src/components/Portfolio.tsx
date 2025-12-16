@@ -1,12 +1,12 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Play, X } from "lucide-react";
 
-import pubThumb from "../assets/images/thumbnails/pub_fictive.png";
-import courtThumb from "../assets/images/thumbnails/court_metrage.png";
-import instaThumb from "../assets/images/thumbnails/instagram.png";
-import musicThumb from "../assets/images/thumbnails/clip_musicale.png";
-import publiThumb from "../assets/images/thumbnails/publi_portrait.png";
-import interviewThumb from "../assets/images/thumbnails/interview.png";
+import pubThumb from "../assets/images/thumbnails/pub_fictive.avif";
+import courtThumb from "../assets/images/thumbnails/court_metrage.avif";
+import instaThumb from "../assets/images/thumbnails/instagram.avif";
+import musicThumb from "../assets/images/thumbnails/clip_musicale.avif";
+import publiThumb from "../assets/images/thumbnails/publi_portrait.avif";
+import interviewThumb from "../assets/images/thumbnails/interview.avif";
 import { cn } from "./ui/utils";
 import { useState } from "react";
 import { useIsMobile } from "./ui/use-mobile";

@@ -1,7 +1,7 @@
 import { ArrowLeft, Check, ScrollText } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
-import realisationImg from "../assets/images/services/realisation.jpg";
+import realisationImg from "../assets/images/services/realisation.avif";
 import { cn } from "./ui/utils";
 
 interface ServiceDetailProps {
