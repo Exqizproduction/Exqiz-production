@@ -58,48 +58,6 @@ export default function App() {
 
     return (
         <div className="min-h-screen relative text-white overflow-hidden">
-            <Helmet>
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@graph": [
-                            {
-                                "@type": "Organization",
-                                name: "Exqiz Prod",
-                                url: "https://www.exqiz-prod.fr",
-                                logo: "https://www.exqiz-prod.fr/assets/logo.avif",
-                            },
-                            {
-                                "@type": "Service",
-                                serviceType: "Production audiovisuelle",
-                                provider: {
-                                    "@type": "Organization",
-                                    name: "Exqiz Prod",
-                                },
-                                areaServed: "Lyon, France",
-                                url: "https://www.exqiz-prod.fr/#services",
-                            },
-                            {
-                                "@type": "CreativeWork",
-                                name: "Portfolio",
-                                url: "https://www.exqiz-prod.fr/#portfolio",
-                                creator: {
-                                    "@type": "Organization",
-                                    name: "Exqiz Prod",
-                                },
-                            },
-                            {
-                                "@type": "ContactPoint",
-                                contactType: "Customer Service",
-                                telephone: "+33 6 29 84 29 22",
-                                areaServed: "FR",
-                                availableLanguage: "French",
-                                url: "https://www.exqiz-prod.fr/#contact",
-                            },
-                        ],
-                    })}
-                </script>
-            </Helmet>
             <div className="absolute inset-0 bg-gradient-to-br from-black via-zinc-900 to-black"></div>
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 via-transparent to-primary/5"></div>
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
