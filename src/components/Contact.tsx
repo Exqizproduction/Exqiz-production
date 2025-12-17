@@ -256,7 +256,7 @@ export function Contact() {
                             <button
                                 type="submit"
                                 onClick={handleSubmit}
-                                className="w-full text-primary-foreground px-8 py-3 rounded-lg bg-primary/80 hover:bg-primary/70 transition-colors flex items-center justify-center gap-2"
+                                className="w-full text-primary-foreground px-8 py-3 rounded-lg bg-primary/80 hover:bg-primary/70 transition-colors flex items-center justify-center gap-2 cursor-pointer"
                             >
                                 <Send className="w-5 h-5" />
                                 Envoyer le message

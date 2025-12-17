@@ -3,7 +3,7 @@ import { Play, X } from "lucide-react";
 
 import pubThumb from "../assets/images/thumbnails/pub_fictive.avif";
 import courtThumb from "../assets/images/thumbnails/court_metrage.avif";
-import instaThumb from "../assets/images/thumbnails/instagram.avif";
+import kimbayaThumb from "../assets/images/thumbnails/kimbaya.avif";
 import musicThumb from "../assets/images/thumbnails/clip_musicale.avif";
 import publiThumb from "../assets/images/thumbnails/publi_portrait.avif";
 import interviewThumb from "../assets/images/thumbnails/interview.avif";
@@ -28,15 +28,15 @@ const projects = [
         duration: "1:49",
         style: "scale-125",
         alreadyZoomed: true,
-        videoId: "IAekrddCuqo"
+        videoId: "IAekrddCuqo",
     },
     {
         id: 3,
-        title: "OCTOPOOL",
-        category: "Vidéo Promotionnelle",
-        image: instaThumb,
-        duration: "1:09",
-        style: "translate-x--26",
+        title: "KIMBAYA",
+        category: "After Movie",
+        image: kimbayaThumb,
+        duration: "1:07",
+        videoId: "BOQMqmaQ5hQ",
     },
     {
         id: 4,
@@ -44,7 +44,7 @@ const projects = [
         category: "Clip Musical",
         image: musicThumb,
         duration: "4:50",
-        videoId: "HbxzS1oRTT8"
+        videoId: "HbxzS1oRTT8",
     },
     {
         id: 5,
@@ -52,7 +52,7 @@ const projects = [
         category: "Publi-Portrait",
         image: publiThumb,
         duration: "3:03",
-        videoId: "J_avGuwM9Js"
+        videoId: "J_avGuwM9Js",
     },
     {
         id: 6,
@@ -60,6 +60,7 @@ const projects = [
         category: "Portrait Artisant",
         image: interviewThumb,
         duration: "4:06",
+        videoId: "M52DbvUKIO4",
     },
 ];
 
@@ -83,7 +84,7 @@ export function Portfolio() {
                     {projects.map((project) => (
                         <div
                             key={project.id}
-                            className="group relative overflow-hidden rounded-lg cursor-pointer aspect-video"
+                            className="group relative overflow-hidden rounded-lg aspect-video"
                         >
                             <ImageWithFallback
                                 src={project.image}
@@ -96,7 +97,12 @@ export function Portfolio() {
                                         : ""
                                 )}
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                            <div
+                                className={cn(
+                                    "absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80  transition-opacity",
+                                    !isMobile ? "group-hover:opacity-100" : ""
+                                )}
+                            ></div>
 
                             <div className="absolute inset-0 flex flex-col justify-end p-6">
                                 <div className="mb-2 text-sm text-gray-300">
@@ -108,15 +114,28 @@ export function Portfolio() {
                                 </div>
                             </div>
 
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div
+                                className={cn(
+                                    "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  group-hover:opacity-100 transition-opacity",
+                                    !isMobile ? "opacity-0" : ""
+                                )}
+                            >
                                 <button
-                                    className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center"
+                                    className={cn(
+                                        "w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center cursor-pointer",
+                                        isMobile ? "w-12 h-12" : ""
+                                    )}
                                     onClick={() => {
                                         setDisplayVideo(true);
                                         setVideoId(project.videoId || "");
                                     }}
                                 >
-                                    <Play className="w-8 h-8 text-white" />
+                                    <Play
+                                        className={cn(
+                                            "w-8 h-8 text-white",
+                                            isMobile ? "w-4 h-4" : ""
+                                        )}
+                                    />
                                 </button>
                             </div>
                         </div>

@@ -121,7 +121,7 @@ export function Navigation() {
                     <li>
                         <button
                             onClick={() => scrollToSection("accueil")}
-                            className="hover:text-gray-300 transition-colors"
+                            className="hover:text-gray-300 transition-colors cursor-pointer"
                         >
                             Accueil
                         </button>
@@ -129,7 +129,7 @@ export function Navigation() {
                     <li>
                         <button
                             onClick={() => scrollToSection("portfolio")}
-                            className="hover:text-gray-300 transition-colors"
+                            className="hover:text-gray-300 transition-colors cursor-pointer"
                         >
                             Portfolio
                         </button>
@@ -137,7 +137,7 @@ export function Navigation() {
                     <li>
                         <button
                             onClick={() => scrollToSection("services")}
-                            className="hover:text-gray-300 transition-colors"
+                            className="hover:text-gray-300 transition-colors cursor-pointer"
                         >
                             Services
                         </button>
@@ -145,7 +145,7 @@ export function Navigation() {
                     <li>
                         <button
                             onClick={() => scrollToSection("clients")}
-                            className="hover:text-gray-300 transition-colors"
+                            className="hover:text-gray-300 transition-colors cursor-pointer"
                         >
                             Témoignages
                         </button>
@@ -153,7 +153,7 @@ export function Navigation() {
                     <li>
                         <button
                             onClick={() => scrollToSection("contact")}
-                            className="hover:text-gray-300 transition-colors"
+                            className="hover:text-gray-300 transition-colors cursor-pointer"
                         >
                             Contact
                         </button>

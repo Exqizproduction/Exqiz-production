@@ -350,7 +350,7 @@ export function ServiceDetail({
                         </div>
                         <div className="mt-8">
                             <button
-                                className="w-full bg-primary/80 text-primary-foreground px-8 py-3 rounded-lg  hover:bg-primary/70 transition-colors"
+                                className="w-full bg-primary/80 text-primary-foreground px-8 py-3 rounded-lg  hover:bg-primary/70 transition-colors cursor-pointer"
                                 onClick={onContact}
                             >
                                 Demander un devis

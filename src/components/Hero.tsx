@@ -87,7 +87,7 @@ export function Hero() {
                                         .getElementById("portfolio")
                                         ?.scrollIntoView({ behavior: "smooth" })
                                 }
-                                className="text-primary-foreground px-8 py-3 rounded-full bg-primary/80 hover:bg-primary/70 transition-colors flex items-center gap-2"
+                                className="text-primary-foreground px-8 py-3 rounded-full bg-primary/80 hover:bg-primary/70 transition-colors flex items-center gap-2 cursor-pointer"
                             >
                                 <Play className="w-5 h-5" />
                                 Voir mon travail
@@ -98,7 +98,7 @@ export function Hero() {
                                         .getElementById("contact")
                                         ?.scrollIntoView({ behavior: "smooth" })
                                 }
-                                className="border border-white px-8 py-3 rounded-full hover:bg-white/10 transition-colors"
+                                className="border border-white px-8 py-3 rounded-full hover:bg-white/10 transition-colors cursor-pointer"
                             >
                                 Me contacter
                             </button>
