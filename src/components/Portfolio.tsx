@@ -33,7 +33,7 @@ const projects = [
     {
         id: 3,
         title: "KIMBAYA",
-        category: "After Movie",
+        category: "Aftermovie",
         image: kimbayaThumb,
         duration: "1:07",
         videoId: "BOQMqmaQ5hQ",
