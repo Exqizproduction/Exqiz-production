@@ -34,13 +34,12 @@ export function Clients() {
             testimonial:
                 "Un immense merci Bastien pour la vidéo aftermovie de notre soirée billard ! Tu as su capturer parfaitement l’ambiance, les moments forts et toute l’énergie de l’événement. Le résultat est dynamique, chaleureux et met vraiment en valeur chaque instant. Merci pour ton professionnalisme, ta créativité et ta réactivité. Nous sommes ravis du rendu et nous te recommandons sans hésiter !",
         },
-        // {
-        //     company: "StartUp Innov",
-        //     person: "Lucas Bernard",
-        //     role: "CEO",
-        //     testimonial:
-        //         "Marc a su comprendre nos besoins et créer un contenu vidéo percutant pour notre levée de fonds. Son professionnalisme et sa réactivité sont exemplaires.",
-        // },
+        {
+            name: "Adrien legrand",
+            role: "Cuisinier",
+            testimonial:
+                "Un grand merci à Bastien pour son professionnalisme, le respect des délais et, surtout, l’excellente qualité de son travail final. Grâce à son expertise, son sens du détail et sa créativité, il a su sublimer chacun des plats.",
+        },
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
