@@ -57,7 +57,7 @@ const projects = [
     {
         id: 6,
         title: "BESSARD VISION",
-        category: "Portrait Artisant",
+        category: "Portrait Artisan",
         image: interviewThumb,
         duration: "4:06",
         videoId: "M52DbvUKIO4",
